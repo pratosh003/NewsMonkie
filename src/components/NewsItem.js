@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 
 
 const NewsItem = (props)=> {
@@ -16,7 +16,7 @@ const NewsItem = (props)=> {
             <h5 className="card-title">{title}</h5>
             <p className="card-text">{description}</p>
             <p className="card-text"><small className="text-muted">at {new Date(publishedAt).toGMTString()}</small></p>
-            <a href={newsUrl} target="_blank" className="btn btn-info btn-sm">Read More</a>
+            <a href={newsUrl} target="_blank" rel="noopener noreferrer"  className="btn btn-info btn-sm">Read More</a>
           </div>
         </div>
       </div>

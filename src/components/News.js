@@ -7,12 +7,12 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 
 const News = (props) => {
   const [articles, setArticles] = useState([]);
-  // eslint-disable-next-line
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
   //document.title = `"NewsMonkey - ${props.category}"`;
 
+  // eslint-disable-next-line
   const updateNews = async () => {
     setLoading(true)
     const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=6a35325fdbb84d7bbeceae77d5ed430c&page=${page}&pageSize=${props.pageSize}`;
@@ -27,6 +27,7 @@ const News = (props) => {
 
   useEffect(() => {
     updateNews();
+    // eslint-disable-next-line
   }, [])
 
   const capitalizeFirstLetter = (string) => {
